@@ -9,12 +9,25 @@ Run Devin (Cognition) models in Hermes over the Cognition subscription API. Nati
 
 ## Usage
 
-```bash
-mkdir -p ~/.hermes/plugins/model-providers/devin-api
-cp plugin.yaml __init__.py cascade_client.py cascade_wire.py ~/.hermes/plugins/model-providers/devin-api/
+1. Clone this repo
 
-hermes --provider devin-api -m adaptive     # or /model → "Devin (Cascade API)"
-```
+   ```bash
+   git clone https://github.com/Dinkum/Hermes-Devin-API-Plugin
+   ```
 
-Aliases: `cascade`, `devin-cascade`, `devin-http`. This is not the ACP plugin
-(`Devin (ACP agent)`), which spawns `devin acp` and lets Devin run its own tools.
+2. Copy the plugin into Hermes
+
+   ```bash
+   mkdir -p ~/.hermes/plugins/model-providers/devin-api
+   cp Hermes-Devin-API-Plugin/{plugin.yaml,__init__.py,cascade_client.py,cascade_wire.py} \
+      ~/.hermes/plugins/model-providers/devin-api/
+   ```
+
+3. Restart Hermes — plugins are discovered once at startup, so a running session won't see it
+   (if you use the messaging gateway: `hermes gateway restart`)
+
+4. Use it
+
+   ```bash
+   hermes --provider devin-api -m adaptive     # or /model → "Devin (Cascade API)"
+   ```
