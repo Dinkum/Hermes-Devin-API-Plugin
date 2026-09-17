@@ -19,12 +19,14 @@ Run Devin (Cognition) models in Hermes over the Cognition subscription API. Nati
 
    ```bash
    mkdir -p ~/.hermes/plugins/model-providers/devin-api
-   cp Hermes-Devin-API-Plugin/{plugin.yaml,__init__.py,cascade_client.py,cascade_wire.py} \
-      ~/.hermes/plugins/model-providers/devin-api/
+   cp Hermes-Devin-API-Plugin/* ~/.hermes/plugins/model-providers/devin-api/
    ```
 
-3. Restart Hermes — plugins are discovered once at startup, so a running session won't see it
-   (if you use the messaging gateway: `hermes gateway restart`)
+3. Restart Hermes to load the plugin
+
+   ```bash
+   hermes gateway restart
+   ```
 
 4. Use it
 
