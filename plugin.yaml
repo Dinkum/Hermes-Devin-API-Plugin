@@ -1,0 +1,5 @@
+name: devin-api-provider
+kind: model-provider
+version: 1.0.0
+description: Devin (Cognition) via the Codeium Cascade chat API — native tool calling
+author: Blake
