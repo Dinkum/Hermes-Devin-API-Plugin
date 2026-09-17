@@ -1,6 +1,6 @@
 # Hermes Devin API Plugin
 
-Run Devin (Cognition) models in Hermes over the Codeium Cascade chat API — Hermes runs the tools.
+Run Devin (Cognition) models in Hermes over the Cognition subscription API. Native Hermes tool calling.
 
 ## Prereqs
 
